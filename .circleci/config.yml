@@ -49,6 +49,11 @@ commands:
       - run:
           name: update npm
           command: sudo npm install -g npm@latest
+      - run:
+          name: environment
+          command: |
+            node --version
+            npm --version
 
   prepare-repo:
     description: "Checkout, install (dev) dependencies and determine versions."
