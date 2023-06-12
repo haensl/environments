@@ -5,6 +5,7 @@
   "main": "dist/environments.cjs.js",
   "module": "dist/environments.esm.js",
   "unpkg": "dist/environments.umd.js",
+  "type": "module",
   "scripts": {
     "build": "npm run clean && NODE_ENV=production rollup -c",
     "clean": "rimraf ./dist",

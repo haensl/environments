@@ -123,7 +123,7 @@ jobs:
           command: mkdir -p test-results/eslint
       - run:
           name: lint
-          command: npm run lint:ci
+          command: npm run lint:junit
       - store_test_results:
           path: test-results
 
