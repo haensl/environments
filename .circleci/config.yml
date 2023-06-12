@@ -79,7 +79,7 @@ commands:
         default: test-app
     steps:
       - run:
-          working-directory: /tmp
+          working_directory: /tmp
           name: create test npm app
           command: |
             mkdir << parameters.project_name >>
@@ -93,12 +93,12 @@ commands:
       - create-test-project
       - run:
           name: install module
-          working-directory: /tmp/test-app
+          working_directory: /tmp/test-app
           command: |
             npm i -S ~/environments
       - run:
           name: add test command
-          working-directory: /tmp/test-app
+          working_directory: /tmp/test-app
           command: |
             npm pkg set scripts.test='jest --runInBand --no-cache --ci'
 
