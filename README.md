@@ -58,14 +58,14 @@ $ yarn add @haensl/environments
 
 ## Synopsis
 
-The `environments` object is a simple JavaScript object that maps to strings:
+The `environments` object is a simple JSON object that maps to strings:
 
 ```javascript
 {
-  development: 'development',
-  production: 'production',
-  qa: 'qa',
-  test: 'test'
+  "development": "development",
+  "production": "production",
+  "qa": "qa",
+  "test": "test"
 }
 ```
 

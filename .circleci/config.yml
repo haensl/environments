@@ -215,7 +215,7 @@ jobs:
           name: copy package test
           working_directory: /tmp/test-app
           command: |
-            cp ~/environments/environments.package.tests.js ./
+            cp ~/environments/environments.package.test.js ./
       - run:
           name: test module
           working_directory: /tmp/test-app
