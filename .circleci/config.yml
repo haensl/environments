@@ -100,7 +100,7 @@ commands:
           name: add test command
           working-directory: /tmp/test-app
           command: |
-            npm pkg set scripts.test="jest --runInBand --no-cache --ci"
+            npm pkg set scripts.test='jest --runInBand --no-cache --ci'
 
   package-information:
     steps:
@@ -222,6 +222,7 @@ jobs:
           name: test module
           working_directory: /tmp/test-app
           command: |
+            cat package.json
             npm test
 
   publish:
