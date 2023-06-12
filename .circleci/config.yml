@@ -87,6 +87,7 @@ commands:
 
   package-test-setup:
     steps:
+      - prepare-repo
       - attach_workspace:
           at: ~/
       - create-test-project
