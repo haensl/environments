@@ -1,0 +1,76 @@
+{
+  "name": "@haensl/environments",
+  "version": "1.0.0",
+  "description": "Simple object runtime environments.",
+  "main": "dist/environments.cjs.js",
+  "module": "dist/environments.esm.js",
+  "unpkg": "dist/environments.umd.js",
+  "scripts": {
+    "build": "npm run clean && NODE_ENV=production rollup -c",
+    "clean": "rimraf ./dist",
+    "lint": "eslint '**/*.js'",
+    "lint:junit": "eslint --format junit -o test-results/eslint/results.xml '**/*.js'",
+    "prepare": "if [ \"${NODE_ENV}\" != 'production' ]; then husky install; fi",
+    "test": "jest --runInBand --no-cache --colors --passWithNoTests",
+    "test:junit": "jest --runInBand --no-cache --ci --reporters='default' --reporters='jest-junit' --passWithNoTests",
+    "tdd": "jest --runInBand --colors --watch"
+  },
+  "eslintConfig": {
+    "env": {
+      "node": true,
+      "jest": true,
+      "es6": true
+    },
+    "parserOptions": {
+      "ecmaVersion": 11,
+      "sourceType": "module"
+    },
+    "extends": [
+      "@haensl"
+    ]
+  },
+  "jest": {
+    "modulePathIgnorePatterns": [
+      "package.test"
+    ],
+    "testPathIgnorePatterns": [
+      "/node_modules/"
+    ]
+  },
+  "jest-junit": {
+    "outputDirectory": "test-results/jest",
+    "outputName": "results.xml",
+    "suitName": "@haensl/environments unit tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/haensl/environments.git"
+  },
+  "keywords": [
+    "environment",
+    "runtime"
+  ],
+  "author": {
+    "name": "HP Dietz",
+    "url": "https://hpdietz.com",
+    "twitter": "@h_p_d",
+    "email": "h.p.dietz@gmail.com"
+  },
+  "funding": "https://github.com/sponsors/haensl",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/haensl/environments/issues"
+  },
+  "homepage": "https://github.com/haensl/environments#readme",
+  "devDependencies": {
+    "@haensl/eslint-config": "^1.4.6",
+    "@rollup/plugin-commonjs": "^25.0.1",
+    "@rollup/plugin-terser": "^0.4.3",
+    "eslint": "^8.42.0",
+    "husky": "^8.0.3",
+    "jest": "^29.5.0",
+    "jest-junit": "^16.0.0",
+    "rimraf": "^5.0.1",
+    "rollup": "^3.25.1"
+  }
+}
