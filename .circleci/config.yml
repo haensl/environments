@@ -180,8 +180,7 @@ jobs:
     working_directory: ~/environments
     steps:
       - init
-      - attach_workspace:
-          at: ~/environments
+      - checkout
       - determine-versions
       - run:
           name: changelog matches package.json
