@@ -1,6 +1,6 @@
 # @haensl/environments
 
-JS runtime environments. Simple object.
+JS runtime environments. Simple JSON object.
 
 [![NPM](https://nodei.co/npm/@haensl%2Fenvironments.png?downloads=true)](https://nodei.co/npm/@haensl%2Fenvironments/)
 
@@ -47,11 +47,7 @@ $ yarn add @haensl/environments
     CJS, i.e. `require`
 
     ```javascript
-    // Mind the curly braces!
-    const { environments } = require('@haensl/environments');
-
-    // Using the `default` prop of the export works, too.
-    // const environments = require('@haensl/environments').default;
+    const environments = require('@haensl/environments');
 
     // ...
 

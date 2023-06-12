@@ -153,11 +153,6 @@ jobs:
       - init
       - prepare-repo
       - run:
-          name: generate production bundle
-          command: npm run build
-      - store_artifacts:
-          path: dist
-      - run:
           name: pack
           environment:
             NODE_ENV: 'production'
@@ -170,12 +165,11 @@ jobs:
           root: ./
           paths:
             - CHANGELOG.md
-            - src
-            - dist
             - README.md
             - LICENSE
             - package.json
             - package-lock.json
+            - index.json
             - .npmignore
             - haensl-environments.tgz
 

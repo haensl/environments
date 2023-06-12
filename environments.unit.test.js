@@ -1,4 +1,4 @@
-const { environments } = require('./');
+const environments = require('./');
 
 describe('@haensl/environments', () => {
   it('contains environment "development"', () => {

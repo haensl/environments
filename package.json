@@ -2,12 +2,8 @@
   "name": "@haensl/environments",
   "version": "1.0.0",
   "description": "Simple object runtime environments.",
-  "main": "dist/environments.cjs.js",
-  "module": "dist/environments.esm.js",
-  "unpkg": "dist/environments.umd.js",
+  "main": "index.json",
   "scripts": {
-    "build": "npm run clean && NODE_ENV=production rollup -c",
-    "clean": "rimraf ./dist",
     "lint": "eslint '**/*.js'",
     "lint:junit": "eslint --format junit -o test-results/eslint/results.xml '**/*.js'",
     "prepare": "if [ \"${NODE_ENV}\" != 'production' && -z \"${CI}\" ]; then husky install; fi",
