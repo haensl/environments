@@ -281,4 +281,4 @@ workflows:
               only: master
       - publish-github-release:
           requires:
-            - package-test-esm-js
+            - publish
