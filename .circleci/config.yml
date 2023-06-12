@@ -170,6 +170,7 @@ jobs:
             - LICENSE
             - package.json
             - package-lock.json
+            - environments.package.test.js
             - index.json
             - .npmignore
             - haensl-environments.tgz
