@@ -107,20 +107,6 @@ commands:
           command: |
             npm pkg set scripts.test='jest --runInBand --no-cache --ci'
 
-  package-information:
-    steps:
-      - run:
-          name: install tree
-          command: sudo apt-get -y install tree
-      - run:
-          name: gather bundle information
-          command: |
-            npm info @haensl/environments@${VERSION} > ./bundle.info
-            tree -s node_modules/@haensl/environments >> ./bundle.info
-      - store_artifacts:
-          path: bundle.info
-
-
 jobs:
   lint:
     docker:
@@ -244,7 +230,6 @@ jobs:
       - run:
           name: publish node module
           command: npm publish --access public
-      - package-information
 
   publish-github-release:
     docker:
