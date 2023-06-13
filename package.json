@@ -1,6 +1,6 @@
 {
   "name": "@haensl/environments",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Simple JSON object of runtime environments.",
   "main": "index.json",
   "scripts": {
