@@ -1,12 +1,12 @@
 {
   "name": "@haensl/environments",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Simple JSON object of runtime environments.",
   "main": "index.json",
   "scripts": {
     "lint": "eslint '**/*.js'",
     "lint:junit": "eslint --format junit -o test-results/eslint/results.xml '**/*.js'",
-    "prepare": "if [ \"${NODE_ENV}\" != 'production' && -z \"${CI}\" ]; then husky install; fi",
+    "prepare": "if [ \"${NODE_ENV}\" != 'production' && -z \"${CI}\" ]; then husky; fi",
     "test": "jest --runInBand --no-cache --colors --passWithNoTests",
     "test:junit": "jest --runInBand --no-cache --ci --reporters='default' --reporters='jest-junit' --passWithNoTests",
     "tdd": "jest --runInBand --colors --watch"
@@ -67,11 +67,11 @@
     "@rollup/plugin-commonjs": "^25.0.1",
     "@rollup/plugin-terser": "^0.4.3",
     "eslint": "^8.42.0",
-    "husky": "^8.0.3",
+    "husky": "^9.0.11",
     "jest": "^29.5.0",
     "jest-environment-node": "^29.5.0",
     "jest-junit": "^16.0.0",
     "rimraf": "^5.0.1",
-    "rollup": "^3.25.1"
+    "rollup": "^4.12.1"
   }
 }
